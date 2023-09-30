@@ -1,7 +1,7 @@
 import LandingPage from './components/LandingPage/LandingPage';
 import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
-import SignUp_Login from './components/SignUpLogin/SignUp_Login';
+import SignUpLogin from './components/SignUpLogin/SignUpLogin';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <LandingPage/>
       </Route>
       <Route path="/signup">
-        <SignUp_Login/>
+        <SignUpLogin/>
       </Route>
     </Switch>
     </div> 

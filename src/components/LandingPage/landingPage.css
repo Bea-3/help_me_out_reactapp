@@ -111,7 +111,7 @@
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* background: url(<path-to-image>), lightgray -0.216px -9.52px / 100.119% 111.354% no-repeat; */
+    z-index: 5;
 }
 .img-lady{
     /* border: 1px solid purple; */
@@ -124,7 +124,7 @@
     position: absolute;
     right:30px;
     top:0px;
-    /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), url(<path-to-image>), lightgray -8px -21.638px / 102.62% 104.898% no-repeat; */
+    z-index: 5;
 }
 .dotted-blue{
     /* border:1px solid cyan; */
@@ -136,7 +136,7 @@
     position: absolute;
     top:230px;
     left:-20px;
-    z-index: -50;
+    z-index: 1;
 }
 .dotted-grey{
     /* border:1px solid magenta; */
@@ -148,7 +148,7 @@
     position:absolute;
     right:-17px;
     top:-60px;
-    z-index: -50;
+    z-index: 1;
 }
 
 /* Features Styles */

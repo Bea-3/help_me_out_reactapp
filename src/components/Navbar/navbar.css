@@ -32,7 +32,7 @@
    display: inline-flex;
    gap:39px;
 }
-.link-items p{
+.link-items p a{
     color: #000;
     /* Typography/Button/B2 */
     font-family: "Work Sans";
@@ -43,7 +43,7 @@
     
 }
 
-.get-started p{
+.get-started p a{
     color: var(--primary-main, #120B48);
     font-family: "Sora";
     font-size: 18px;
