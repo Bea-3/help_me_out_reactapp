@@ -14,16 +14,16 @@ function App() {
       <Route exact path="/">
         <LandingPage/>
       </Route>
-      <Route path="/signup">
+      <Route exact path="/signup">
         <SignUpLogin/>
       </Route>
-      <Route path="/video-repo">
+      <Route exact path="/video-repo">
         <VideoRepository/>
       </Route>
-      <Route path="/single-video/:id">
+      <Route exact path="/single-video/:id">
         <SingleVideoRepo/>
       </Route>
-      <Route path="/video-playback">
+      <Route exact path="/video-playback">
         <VideoPlayback/>
       </Route>
     </Switch>
