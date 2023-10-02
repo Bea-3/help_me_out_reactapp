@@ -1,11 +1,11 @@
 import './singleVideoRepo.css';
 import { Link } from "react-router-dom";
-import { useParams } from 'react-router-dom';
-import dummyVideos from '../VideoData';
+// import { useParams } from 'react-router-dom';
+// import dummyVideos from '../VideoData';
 
 
 const SingleVideoRepo = () => {
-    const { id } = useParams();
+    // const { id } = useParams();
 
     // Find the video with the matching id
     // const video = dummyVideos.find((video) => video.id === Number(id));

@@ -1,9 +1,9 @@
-import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
+// import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import React from 'react';
 import { Link } from "react-router-dom";
 import './videoCard.css';
-import dummyVideos from '../../VideoData';
-import useFetch from '../../useFetch';
+// import dummyVideos from '../../VideoData';
+// import useFetch from '../../useFetch';
 import { useEffect } from 'react';
 import { useState } from 'react';
 
