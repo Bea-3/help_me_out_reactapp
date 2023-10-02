@@ -27,8 +27,8 @@ const SignUp_Login = () => {
                         <p>Join millions of others in sharing successful moves on <span>HelpMeOut</span>.</p>
                     </div>
                     <div className="login-buttons">
-                        <Link to="/videoRepo" className="btn-wrap-google"><div className="login-btn"><span className="google-icon"></span> <p>Continue with Google</p></div></Link>
-                        <Link to="/videoRepo" className="btn-wrap-facebook"><div className="login-btn"><span className="facebook-icon"></span> <p>Continue with Facebook</p></div></Link>
+                        <Link to="/video-repo" className="btn-wrap-google"><div className="login-btn"><span className="google-icon"></span> <p>Continue with Google</p></div></Link>
+                        <Link to="/video-repo" className="btn-wrap-facebook"><div className="login-btn"><span className="facebook-icon"></span> <p>Continue with Facebook</p></div></Link>
                     </div>
                     <div className="or-frame">
                         <div className="vector-line1"></div>
