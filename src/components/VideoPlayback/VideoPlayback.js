@@ -71,7 +71,7 @@ const VideoPlayback = () => {
                 <div className="save-video-card">
                     <p>To ensure the availability and privacy of your video, we recommend saving it to your account.</p>
                     <button>Save video</button>
-                    <p className="account">Don’t have an account? <span>Create account</span> </p>
+                    <p className="account">Don't have an account? <span>Create account</span> </p>
                 </div>
             </div>
             <div className="footer">

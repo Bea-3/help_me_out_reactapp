@@ -32,7 +32,7 @@ const VideoCard = () => {
         // mapping over api results
         <div className="card-content">
             {videos.map((video) => (
-                <Link to={`/singleVideo/${video.id}`}>
+                <Link to={`/single-video/${video.id}`}>
                 <div className="video-card" key={video.id}>
                     <div className="video-frame">
                     <iframe

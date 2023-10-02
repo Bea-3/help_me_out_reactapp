@@ -17,13 +17,13 @@ function App() {
       <Route path="/signup">
         <SignUpLogin/>
       </Route>
-      <Route path="/videoRepo">
+      <Route path="/video-repo">
         <VideoRepository/>
       </Route>
-      <Route path="/singleVideo">
+      <Route path="/single-video/:id">
         <SingleVideoRepo/>
       </Route>
-      <Route path="/videoPlayback">
+      <Route path="/video-playback">
         <VideoPlayback/>
       </Route>
     </Switch>
