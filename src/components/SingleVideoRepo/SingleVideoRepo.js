@@ -1,11 +1,22 @@
+import './singleVideoRepo.css';
 import { Link } from "react-router-dom";
-import './videoRepository.css';
-import VideoCard from "./VideoCard/VideoCard";
+import { useParams } from 'react-router-dom';
+import dummyVideos from '../VideoData';
 
 
-const VideoRepository = () => {
+const SingleVideoRepo = () => {
+    const { id } = useParams();
+
+    // Find the video with the matching id
+    // const video = dummyVideos.find((video) => video.id === Number(id));
+
+    // if (!video) {
+    //     // Handle the case when the video is not found
+    //     return <div>Video not found.</div>;
+    // }
+
     return ( 
-        <div className="video-repo-content">
+        <div className="single-video-content">
             <div className="video-repo-nav">
                 <Link to="/" className="icon-logo-nav">
                         <i><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
@@ -27,34 +38,51 @@ const VideoRepository = () => {
                     <span></span>
                 </div>
             </div>
-            <div className="top-content">
-                <div className="hello-user">
-                    <h1>Hello, John Bells</h1>
-                    <p>Here are your recorded videos</p>
+            <div className="content-wrap">
+                <div className="bread-crumbs">
+                    <p><span>Home</span> / <span>Recent Videos </span> / <span>Title</span></p>
                 </div>
-                <div className="search-video">
-                <span></span><input type="text" placeholder="Search for a particular video" />
+
+                <div className="content-video-heading">
+                    <h1>Title</h1>
+                    <span></span>
+                </div>
+                <div className="content-video-display">
+                    <div className="content-video-display-frame">
+                    <iframe
+                        title="Screen Recording"
+                        src="SEPTEMBER 23, 2023"
+                    ></iframe>
+                    </div>
+                </div>
+                <div className="content-video-send">
+                    <div className="content-video-send-email">
+                        <input type="text" placeholder='enter email of receiver'/>
+                        <button>Send</button>
+                    </div>
+                    <div className="content-video-send-url">
+                        <span></span>
+                        <button><i></i> Copy URL</button>
+                    </div>
+                </div>
+                <div className="content-video-share">
+                    <p>Share your video</p>
+                    <div className="content-video-share-btn">
+                    <button><i className='fb'></i> Facebook</button>
+                    <button><i className='whats'></i> WhatsApp</button>
+                    <button><i className='tel'></i> Telegram</button>
+                    </div>
+                </div>
+                <div className="content-video-transcript">
+                    <div className="content-video-transcript-heading">
+                        <p>Transcript</p>
+                        <button>English <i></i></button>
+                    </div>
+                    <div className="content-video-transcript-body"></div>
                 </div>
             </div>
-
-            <div className="line-break"></div>
-
-            <div className="recent-files">
-                <h1>Recent Files</h1>
-                <div className="display-cards">
-                <VideoCard/>
-                </div>
-            </div>
-
-            <div className="lastweek-files">
-                <h1>Files from Last Week</h1>
-                {/* <div className="display-cards">
-                <VideoCard/>
-                </div> */}
-            </div>
-            
         </div>
      );
 }
  
-export default VideoRepository;
+export default SingleVideoRepo;

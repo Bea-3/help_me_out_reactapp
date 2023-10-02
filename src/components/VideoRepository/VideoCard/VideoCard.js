@@ -1,92 +1,92 @@
-// import React, { useEffect, useState } from "react";
+import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import React from 'react';
-import './videoCard.css'
+import { Link } from "react-router-dom";
+import './videoCard.css';
+import dummyVideos from '../../VideoData';
+import useFetch from '../../useFetch';
+import { useEffect } from 'react';
+import { useState } from 'react';
 
 const VideoCard = () => {
-    // const [videos, setVideos] = useState([]);
+    const [videos, setVideos] = useState([]);
 
-    // useEffect(() => {
-    //     // Fetch video data from the endpoint
-    //     fetch("your_endpoint_url")
-    //       .then((response) => response.json())
-    //       .then((data) => {
-    //         // Assuming the data is an array of video objects
-    //         setVideos(data);
-    //       })
-    //       .catch((error) => {
-    //         console.error("Error fetching video data:", error);
-    //       });
-    //   }, []);
-    const dummyVideos = [
-        {
-          id: 1,
-          title: "Video Title 1",
-          dateRecorded: "September 1, 2023",
-          thumbnailUrl: "https://media.cnn.com/api/v1/images/stellar/prod/170615135501-iconic-mountains-mount-fitz-roy.jpg",
-          videoUrl: "https://www.youtube.com/watch?v=sj5mmSSKAgY",
-        },
-        {
-          id: 2,
-          title: "Video Title 2",
-          dateRecorded: "September 5, 2023",
-          thumbnailUrl: "https://media.cnn.com/api/v1/images/stellar/prod/170615135501-iconic-mountains-mount-fitz-roy.jpg",
-          videoUrl: "https://www.youtube.com/watch?v=sj5mmSSKAgY",
-        },
-        {
-          id: 3,
-          title: "Video Title 3",
-          dateRecorded: "September 10, 2023",
-          thumbnailUrl: "https://media.cnn.com/api/v1/images/stellar/prod/170615135501-iconic-mountains-mount-fitz-roy.jpg",
-          videoUrl: "https://www.youtube.com/watch?v=sj5mmSSKAgY",
-        },
-      ];
+    useEffect(() => {
+        // Fetch video data from the endpoint
+        fetch("https://chrome-ext-api.onrender.com/api/videos")
+          .then((response) => response.json())
+          .then((data) => {
+            // Assuming the data is an array of video objects
+            setVideos(data);
+          })
+          .catch((error) => {
+            console.error("Error fetching video data:", error);
+          });
+      }, []);
+    // const { id } = useParams();
+    // const { data: videos, error, isPending  } = useFetch('https://ovidotvideo.onrender.com/get_video/' + id);
+    
 
     return ( 
         // mapping over api results
         <div className="card-content">
-            {dummyVideos.map((video) => (
+            {videos.map((video) => (
+                <Link to={`/singleVideo/${video.id}`}>
                 <div className="video-card" key={video.id}>
                     <div className="video-frame">
                     <iframe
-                        title={video.title}
-                        src={video.videoUrl}
-                        frameBorder="0"
-                        allowFullScreen
+                        title="Screen Recording"
+                        src={video.stream_url}
+                        // allowFullScreen={video.allowFullScreen}
+                        // width={video.width}
+                        // height={video.height} 
                     ></iframe>
                     </div>
                     <div className="video-duration"><p>00:34</p></div>
-                    <div className="video-info">
                         <div className="video-info-wrap">
                             <div className="video-title-date">
-                                <p className="video-title">{video.title}</p>
-                                <p className="video-date">{video.dateRecorded}</p>
+                                <p className="video-title">Screen Recording</p>
+                                <p className="video-date">SEPTEMBER 23, 2023</p>
                             </div>
                             <div className="video-action-controls">
                                 <div className="share-link"></div>
-                                <div className="more-actions"></div>
+                                <div className="more-actions"><span></span></div>
                             </div>
                         </div>
-                    </div>
                 </div>
+                </Link>
             ))}
         </div>
-    //      <div className="card-content">
-    //              <div className="video-frame"></div>
-    //              <div className="video-duration"><p>00:34</p></div>
-    //              <div className="video-info">
-    //                  <div className="video-info-wrap">
-    //                      <div className="video-title-date">
-    //                          <p className="video-title">How to create Facebook Ad listing</p>
-    //                          <p className="video-date">SEPTEMBER 23, 2023</p>
-    //                      </div>
-    //                      <div className="video-action-controls">
-    //                          <div className="share-link"></div>
-    //                          <div className="more-actions"></div>
-    //                      </div>
-    //                  </div>
-    //              </div>
-    //  </div>
 
+        // <div className="card-content">
+        // { videos &&  <Link to={`/singleVideo/${videos.video_id}`}>
+        //     <div className="video-card" key={videos.video_id}>
+        //         <div className="video-frame">
+        //         {/* <iframe
+        //             title="Screen Recording"
+        //             src={`$videos.file_path`}
+        //             // allowFullScreen={video.allowFullScreen}
+        //             // width={video.width}
+        //             // height={video.height} 
+        //         ></iframe> */}
+        //         <video width="100%" height="100%" controls >
+        //         <source src={videos.file_path} type="video/webm"/>
+        //         </video>
+        //         </div>
+        //         <div className="video-duration"><p>00:34</p></div>
+        //             <div className="video-info-wrap">
+        //                 <div className="video-title-date">
+        //                     <p className="video-title">Screen Recording</p>
+        //                     <p className="video-date">SEPTEMBER 23, 2023</p>
+        //                 </div>
+        //                 <div className="video-action-controls">
+        //                     <div className="share-link"></div>
+        //                     <div className="more-actions"><span></span></div>
+        //                 </div>
+        //             </div>
+        //     </div>
+        //     </Link>
+        //     }
+        // </div>
      );
 }
  

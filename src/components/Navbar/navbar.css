@@ -1,5 +1,5 @@
 .content{
-    border:1px solid green;
+    /* border:1px solid green; */
     width:100%;
     background-color: #fff;
 }
@@ -9,7 +9,7 @@
     justify-content: space-around;
     padding: var(--Inner-Radius, 12px) 100px;
     align-items: center; 
-    gap:340px;
+    gap:320px;
 }
 .nav-content li{
     list-style: none;

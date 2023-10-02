@@ -1,14 +1,14 @@
 .container{
     width:100%;
     background-color:#F4F6F8;;
-    border:1px solid yellowgreen
+    /* border:1px solid yellowgreen */
 }
 
 /* Hero section styles */
 .hero-content{
     width:100%;
     height: 48.5625rem;
-    border:1px solid black;
+    /* border:1px solid black; */
     display: inline-flex;
     gap:30px;
     justify-content: center;
@@ -20,7 +20,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 48px;
-    width: 548px;
+    width: 510px;
     height:317px;
     margin-top: 230px;     
 }
@@ -29,7 +29,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    width:548px;
+    width:530px;
     height: 204px;
 }
 .information h1{
@@ -47,7 +47,7 @@
     width: 34.25rem;
     color: rgba(0, 0, 0, 0.75);
     font-family: "Inter";
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 400;
     line-height: 1.75rem; /* 140% */
@@ -135,7 +135,7 @@
     background-image: url('../../../public/images/dottedblue.svg');
     position: absolute;
     top:230px;
-    left:-20px;
+    left:-18px;
     z-index: 1;
 }
 .dotted-grey{
@@ -195,7 +195,6 @@
     display:inline-flex;
     justify-content: center;
     gap:56px;
-    border:1px solid tomato;
 }
 .features-text{
     width:548px;
