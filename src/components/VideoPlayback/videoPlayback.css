@@ -392,3 +392,16 @@
     width:100%;
     min-height: 50px;
 }
+.timestamp{
+    width:64px;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+.transcribed-content{
+    width:1028px;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    text-align: left;
+}

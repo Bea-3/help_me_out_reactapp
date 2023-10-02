@@ -6,8 +6,8 @@
 .nav-content{
     width:100%;
     display: inline-flex;
-    justify-content: space-around;
     padding: var(--Inner-Radius, 12px) 100px;
+    justify-content: space-between;
     align-items: center; 
     gap:320px;
 }

@@ -40,7 +40,7 @@ const SingleVideoRepo = () => {
             </div>
             <div className="content-wrap">
                 <div className="bread-crumbs">
-                    <p><span>Home</span> / <span>Recent Videos </span> / <span>Title</span></p>
+                    <p><span>Home</span> / <span>Recent Videos </span> / <span>Video Title</span></p>
                 </div>
 
                 <div className="content-video-heading">
@@ -50,8 +50,7 @@ const SingleVideoRepo = () => {
                 <div className="content-video-display">
                     <div className="content-video-display-frame">
                     <iframe
-                        title="Screen Recording"
-                        src="SEPTEMBER 23, 2023"
+                        title="Screen Recording"                        
                     ></iframe>
                     </div>
                 </div>
@@ -78,7 +77,14 @@ const SingleVideoRepo = () => {
                         <p>Transcript</p>
                         <button>English <i></i></button>
                     </div>
-                    <div className="content-video-transcript-body"></div>
+                    <div className="content-video-transcript-body">
+                    <div className="timestamp">
+                    0.01
+                    </div>
+                            <div className="transcribed-content">
+                            First step. Open Facebook on your desktop or mobile device and locate "Marketplace" in the left-hand menu or at the top of the First step. Open Facebook on your desktop or mobile device and locate "Marketplace" in the left-hand menu or at the top of the 
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>

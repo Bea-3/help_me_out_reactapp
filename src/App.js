@@ -20,7 +20,7 @@ function App() {
       <Route path="/videoRepo">
         <VideoRepository/>
       </Route>
-      <Route path="/singleVideo/:id">
+      <Route path="/singleVideo">
         <SingleVideoRepo/>
       </Route>
       <Route path="/videoPlayback">

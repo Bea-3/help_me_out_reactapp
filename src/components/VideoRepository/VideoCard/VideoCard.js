@@ -22,6 +22,8 @@ const VideoCard = () => {
             console.error("Error fetching video data:", error);
           });
       }, []);
+
+    //   end point not functional.
     // const { id } = useParams();
     // const { data: videos, error, isPending  } = useFetch('https://ovidotvideo.onrender.com/get_video/' + id);
     
@@ -57,6 +59,7 @@ const VideoCard = () => {
             ))}
         </div>
 
+        // trying to display from another endpoint.
         // <div className="card-content">
         // { videos &&  <Link to={`/singleVideo/${videos.video_id}`}>
         //     <div className="video-card" key={videos.video_id}>

@@ -3,7 +3,6 @@
     background-color:#F4F6F8;;
     /* border:1px solid yellowgreen */
 }
-
 /* Hero section styles */
 .hero-content{
     width:100%;
@@ -296,7 +295,7 @@
 }
 .works-article{
     /* border: 1px solid palevioletred; */
-    width:100%;
+    width:1240px;
     height:auto;
     display: flex;
     justify-content: space-around;
@@ -363,11 +362,11 @@
     flex-shrink: 0;
     stroke-width: 1.268px;
     stroke: rgba(27, 35, 61, 0.03);
-    background-image: url('../../../public/images/vector-rec.svg');
+    background-image: url('../../../public/images/rec-1.cb7888a47e24214aeb105805426a8300.svg.svg');
     background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
-    border:1px solid blue;
+    /* border:1px solid blue; */
 }
 
 /* Footer Styles */
